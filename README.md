@@ -18,3 +18,23 @@ The dataset consists of 13 variables, each representing clinical features and de
 11. **smoking**: Whether the patient smokes (0: no, 1: yes)
 12. **time**: Follow-up period (days)
 13. **DEATH_EVENT**: Whether the patient died during the follow-up period (0: no, 1: yes) [Target Variable]
+
+
+### 1. Data Exploration (EDA)
+- Check for missing values and clean the data if necessary.
+- Generated summary statistics for the numerical columns.
+- Visualize the distribution of the target variable (`DEATH_EVENT`).
+-  Plot histograms or box plots for continuous variables like `age`, `creatinine_phosphokinase`, `ejection_fraction`, `serum_creatinine`, etc.
+
+### 2. Data Visualization
+- Created a correlation matrix heatmap to understand the relationships between the features.
+- Create count plots or bar charts for categorical variables like `anaemia`, `diabetes`, `high_blood_pressure`, `sex`, and `smoking`.
+- Create scatter plots or pair plots for continuous variables like `age` vs `ejection_fraction`, `serum_creatinine`, etc., colored by `DEATH_EVENT`.
+
+### 3. Model Building
+- Split the dataset into features (`X`) and the target variable (`y = DEATH_EVENT`).
+- Perform train-test splitting (70% training, 30% testing) using `train_test_split` from sklearn.
+- Standardize the continuous features using `StandardScaler`.
+
+### 4. Model Training and Evaluation
+- Trained a Logistic Regression, K-Nearest Neighbors (KNN), Decision Tree Classifier model and evaluate it using accuracy, precision, recall, and F1-score.
